@@ -65,7 +65,8 @@ This app includes a real authentication system using SQLite + bcrypt.
 
 📊 UI & Dashboard (Add Screenshots Here)
 🔐 Login Page
-<img width="2256" height="1145" alt="image" src="https://github.com/user-attachments/assets/2833f268-979d-4ee8-81c2-50911cd182b3" />
+<img width="2256" height="1145" alt="Screenshot 2025-11-18 102001" src="https://github.com/user-attachments/assets/eadc934b-63e2-41d6-a415-59e7cd9d4e2c" />
+
 
 
 🧠 Sentiment Analyzer
