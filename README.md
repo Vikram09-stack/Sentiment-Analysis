@@ -1,42 +1,43 @@
-# 🎬 Sentiment Analysis Web App (Movie Reviews)  
-A machine learning–powered sentiment analyzer that classifies movie reviews as **Positive** or **Negative** using **NLP + Logistic Regression + TF-IDF**, deployed with **Streamlit**, and featuring **real user authentication with SQLite**.
-
-
-
-## 🚀 Features
-- 🔐 User Registration & Login (Secure hashed passwords using bcrypt + SQL)
-- 📊 Dashboard with review history & filtering
-- 🤖 Trained ML model (Logistic Regression)
-- 🧹 Text preprocessing (stopwords removal, cleaning, TF-IDF)
-- 💾 SQLite database for user accounts + review logs
-- 🌐 Streamlit UI – fast and lightweight
-- 📝 Model training included via Jupyter Notebook (`/training` folder)
+# Sentiment Analysis Web App (Movie Reviews)  
+A machine learning–based application that classifies movie reviews as **Positive** or **Negative** using **NLP, TF-IDF, and Logistic Regression**, deployed with **Streamlit**, featuring secure user authentication and a review history dashboard using SQLite.
 
 ---
 
-## 📂 Project Structure
+## Features
+- User registration & login with secure password hashing (bcrypt + SQLite)
+- Review sentiment prediction (positive or negative)
+- Dashboard to view prediction history per user
+- TF-IDF text preprocessing and Logistic Regression model
+- SQLite database for users & review logs
+- Streamlit-based web interface
+- Includes Jupyter Notebook for model training (`/training` folder)
+
+---
+
+## Project Structure
 Sentiment-Analysis/
 │── app.py
 │── requirements.txt
 │── vectorizer.pkl
 │── model.pkl
 │── reviews.db
-│── Movie_Review.csv # optional dataset, used for training
+│── Movie_Review.csv # dataset (used only for training)
 │── .gitignore
 │── training/
 │ └── sentiment_training.ipynb
 
+yaml
+Copy code
 
+---
 
+## Installation & Setup (Local)
 
+### 1. Clone the Repository
 
-## 🛠️ Installation & Setup (Local)
-
-### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/Vikram09-stack/Sentiment-Analysis.git
 cd Sentiment-Analysis
-2️⃣ Create and activate virtual environment
+2. Create & Activate Virtual Environment
 Windows
 bash
 Copy code
@@ -47,72 +48,69 @@ bash
 Copy code
 python3 -m venv venv
 source venv/bin/activate
-3️⃣ Install dependencies
+3. Install Dependencies
 bash
 Copy code
 pip install -r requirements.txt
-4️⃣ Run the app
+4. Run the App
 bash
 Copy code
 streamlit run app.py
-🔑 Login System
+Login System
 This app includes a real authentication system using SQLite + bcrypt.
 
-✔ Users can create accounts with email + password
-✔ Passwords are stored securely (hashed, never in plain text)
-✔ Each user has their own review history
-✔ No fake/demo login — real credentials only
+Users can create accounts with email/password
 
-📊 UI & Dashboard (Add Screenshots Here)
-🔐 Login Page
-<img width="2256" height="1145" alt="Screenshot 2025-11-18 102001" src="https://github.com/user-attachments/assets/eadc934b-63e2-41d6-a415-59e7cd9d4e2c" />
+Passwords are securely hashed (never stored in plain text)
 
+Each user maintains their own prediction history
 
+No demo login or insecure authentication
 
-🧠 Sentiment Analyzer
-<img width="2363" height="1304" alt="image" src="https://github.com/user-attachments/assets/44356a64-9055-488d-a6b9-ca2121aff7c1" />
-
-
-📈 Dashboard & History
-<img width="2408" height="1365" alt="image" src="https://github.com/user-attachments/assets/5cc43dcf-39c0-48ee-a48e-906b7d572dd9" />
-
-
-📚 Model Training
-The model was trained using a Jupyter Notebook located in:
+UI & Dashboard (Screenshots)
+Login Page
+<img width="2256" height="1145" alt="Login Screenshot" src="https://github.com/user-attachments/assets/eadc934b-63e2-41d6-a415-59e7cd9d4e2c" />
+Sentiment Analyzer
+<img width="2363" height="1304" alt="Analyzer Screenshot" src="https://github.com/user-attachments/assets/44356a64-9055-488d-a6b9-ca2121aff7c1" />
+Dashboard & History
+<img width="2408" height="1365" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/5cc43dcf-39c0-48ee-a48e-906b7d572dd9" />
+Model Training
+The model was trained in a Jupyter Notebook located at:
 
 bash
 Copy code
 /training/sentiment_training.ipynb
-Steps include:
+Training workflow includes:
 
 Cleaning dataset
 
-Generating TF-IDF vectorizer
+TF-IDF vectorization
 
-Training Logistic Regression
+Logistic Regression training
 
-Saving model.pkl & vectorizer.pkl
+Generating evaluation metrics
 
-⚙️ Tech Stack
+Exporting model.pkl and vectorizer.pkl
+
+Tech Stack
 Component	Technology
 UI	Streamlit
-ML model	Logistic Regression + Scikit-learn
-NLP	NLTK stopwords + TF-IDF
-DB	SQLite
-Auth	bcrypt password hashing
+ML Model	Logistic Regression (scikit-learn)
+NLP	TF-IDF + NLTK stopwords
+Database	SQLite
+Authentication	bcrypt password hashing
 Backend	Python
 Deployment	Local / Streamlit Cloud / etc
 
-💡 Future Enhancements
-Deploy to Streamlit Cloud / Render / Railway
+Future Enhancements
+Deployment on Streamlit Cloud / Render / Railway
 
-Add email verification
+Email verification
 
-Add password reset option
+Password reset system
 
-Add support for multiple datasets
+Support for additional datasets
 
-Switch to PostgreSQL or Supabase backend
+Switch to PostgreSQL or Supabase
 
-Improve UI using Streamlit Components / TailwindCSS
-
+Improved UI using Streamlit Components or Tailwind CSS
